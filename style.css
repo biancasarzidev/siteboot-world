@@ -85,7 +85,7 @@ body {
 .card {
     border-radius: 15px; /* Bordas mais arredondadas para um visual mais suave */
     background-color: rgba(255, 255, 255, 0.85); /* Fundo branco suave com transparência */
-    color: #343a40; /* Cor de texto mais suave para combinar com o estilo */
+    color: #343a40; /* Cor do texto para melhor visibilidade */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave no hover */
 }
@@ -129,7 +129,7 @@ body {
 }
 
 .card-img-top {
-    height: 220px; /* Aumenta a altura da imagem para dar mais destaque */
+    height: 200px; /* Ajusta a altura da imagem para algo mais proporcional */
     width: 100%; /* Garante que a imagem ocupe toda a largura */
     border-top-left-radius: 15px; /* Deixa as bordas da imagem arredondadas */
     border-top-right-radius: 15px; /* Deixa as bordas da imagem arredondadas */
@@ -141,9 +141,14 @@ body {
 /*-----ÁREA DO FOOTER E ÍCONES----*/
 
 .footer-custom {
-    background-color: #6f42c1; /* Cor de fundo roxa */
-    color: white; /* Cor do texto branca */
+    background-color: #6f42c1; /* Fundo roxo */
+    color: white; /* Texto branco */
     padding: 20px 0;
+}
+
+.footer-info {
+    text-align: left; /* Alinha o texto à esquerda */
+    max-width: 50%; /* Define um tamanho adequado */
 }
 
 .footer-custom a {
@@ -156,10 +161,8 @@ body {
 }
 
 .footer-social {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza os ícones sociais */
+    text-align: right; /* Alinha os ícones à direita */
+    max-width: 50%; /* Garante que as redes sociais ocupem metade da largura */
 }
 
 .footer-social h4 {
@@ -168,20 +171,19 @@ body {
 
 .social-icons {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 15px; /* Espaçamento entre os ícones */
 }
 
 .social-icon {
-    font-size: 24px;
-    color: white;
-    text-decoration: none;
-    transition: transform 0.3s ease-in-out;
+    font-size: 24px; /* Tamanho dos ícones */
+    color: white; /* Cor dos ícones */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+    color: #d1d1d1; /* Muda a cor ao passar o mouse */
+    transform: scale(1.2); /* Dá um pequeno zoom ao passar o mouse */
 }
 
 /*-----FIM DA ÁREA DO FOOTER E ÍCONES----*/
@@ -193,11 +195,25 @@ body {
         max-height: 250px;
     }
 
+    .container.d-flex {
+        flex-direction: column; /* Empilha os elementos verticalmente em telas menores */
+        align-items: flex-start; /* Mantém alinhado à esquerda */
+    }
+
     .banner-slide {
         height: 250px; /* Ajuste de altura para telas menores */
     }
 
     .card-img-top {
         height: 140px; /* Reduz ainda mais em telas pequenas */
+    }
+
+    .footer-info, .footer-social {
+        max-width: 100%; /* Garante que ocupem toda a largura disponível */
+        text-align: left; /* Deixa tudo alinhado à esquerda em telas pequenas */
+    }
+
+    .social-icons {
+        margin-top: 10px; /* Espaço extra entre os blocos */
     }
 }

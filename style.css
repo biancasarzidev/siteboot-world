@@ -40,6 +40,12 @@ body {
     color: #e0e0e0 !important; /* Suave efeito ao passar o mouse */
 }
 
+.navbar .fa-shopping-cart {
+    color: #000 !important; /* Preto */
+    font-size: 1.8em; /* Tamanho maior para garantir visibilidade */
+    display: inline-block; /* Evita que seja escondido */
+}
+
 /*-----FIM DA ÁREA DO MENU----*/
 
 

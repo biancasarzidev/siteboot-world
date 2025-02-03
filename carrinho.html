@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .banner {
+            height: 300px;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #343a40;
+        }
+        .product-card {
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4" id="carrinho">
+        <h2>Carrinho de Compras</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Produto 1</td>
+                    <td>1</td>
+                    <td>R$ 99,99</td>
+                    <td><button class="btn btn-danger">Remover</button></td>
+                </tr>
+                <tr>
+                    <td>Produto 2</td>
+                    <td>2</td>
+                    <td>R$ 159,98</td>
+                    <td><button class="btn btn-danger">Remover</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Total: R$ 259,97</h4>
+        <button class="btn btn-success">Finalizar Compra</button>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-light text-center text-lg-start mt-4">
+        <div class="text-center p-3">
+            © 2023 Loja de Jogos. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+</body>
+</html>

@@ -12,3 +12,27 @@
 .product-card {
     margin: 15px;
 }
+
+/*-----ÁREA DO FOOTER E ÍCONES----*/
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre os ícones */
+}
+
+.social-icon {
+    font-size: 24px; /* Tamanho dos ícones */
+    color: #343a40; /* Cor dos ícones */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.social-icon:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+/*-----FIM DA ÁREA DO FOOTER E ÍCONES----*/

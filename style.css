@@ -129,6 +129,7 @@ body {
 }
 
 .card-img-top {
+    padding-top: 10px;
     max-height: 150px; /* Limita a altura da imagem */
     width: auto; /* Mantém a largura proporcional */
     object-fit: contain; /* Garante que a imagem se ajuste sem cortar */

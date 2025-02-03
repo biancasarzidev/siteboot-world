@@ -41,10 +41,15 @@ body {
 }
 
 .navbar .fa-shopping-cart {
-    color: #000 !important; /* Preto */
+    color: #ffffff !important; /* Preto */
     font-size: 1.8em; /* Tamanho maior para garantir visibilidade */
     display: inline-block; /* Evita que seja escondido */
 }
+
+.navbar-nav .nav-item .fa-shopping-cart {
+    color: #ffffff !important;
+}
+
 
 /*-----FIM DA ÁREA DO MENU----*/
 

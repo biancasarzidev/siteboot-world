@@ -1,5 +1,35 @@
 @charset "UTF-8";
 
+/*-----ÁREA DO MENU----*/
+
+body {
+    background-color: black; /* Fundo preto */
+    color: white; /* Cor do texto padrão */
+}
+
+/* Estilo da navbar */
+.navbar {
+    background-color: #6f42c1; /* Fundo roxo */
+}
+
+.navbar .nav-link {
+    color: white; /* Cor das letras do menu */
+}
+
+.navbar .nav-link:hover {
+    color: #e0e0e0; /* Cor das letras ao passar o mouse */
+}
+
+.navbar .navbar-brand {
+    color: white; /* Cor da marca */
+}
+
+.navbar .navbar-brand:hover {
+    color: #e0e0e0; /* Cor da marca ao passar o mouse */
+}
+
+/*-----FIM DA ÁREA DO MENU----*/
+
 
 /*-----ÁREA DO BANNER----*/
 .banner {
@@ -14,7 +44,8 @@
 
 .carousel-item img {
     height: 400px; /* Ajuste a altura do banner */
-    object-fit: cover; /* Faz com que a imagem cubra o espaço sem distorcer */
+    width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+    object-fit: contain; /* Ajusta a imagem sem cortá-la */
 }
 
 /*-----FIM DA ÁREA DO BANNER----*/
@@ -29,6 +60,28 @@
     margin-top: 20px;
 }
 
+
+.social-icon:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+.footer-custom {
+    background-color: #6f42c1; /* Cor de fundo roxa */
+    color: white; /* Cor do texto branca */
+}
+
+.footer-custom a {
+    color: white; /* Cor dos links brancos */
+}
+
+.footer-custom a:hover {
+    color: #e0e0e0; /* Cor dos links ao passar o mouse */
+}
+
+.footer-social h4 {
+    margin-top: 20px; /* Espaçamento superior para o título "Siga-nos" */
+}
+
 .social-icons {
     display: flex;
     justify-content: center;
@@ -37,12 +90,8 @@
 
 .social-icon {
     font-size: 24px; /* Tamanho dos ícones */
-    color: #343a40; /* Cor dos ícones */
+    color: white; /* Cor dos ícones */
     text-decoration: none; /* Remove o sublinhado */
-}
-
-.social-icon:hover {
-    color: #007bff; /* Cor ao passar o mouse */
 }
 
 /*-----FIM DA ÁREA DO FOOTER E ÍCONES----*/

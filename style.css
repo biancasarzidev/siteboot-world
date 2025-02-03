@@ -20,34 +20,42 @@ body {
     max-height: 80px; /* Garante que não fique maior do que esse valor */
 }
 
+/* Estilo da navbar */
+.navbar {
+    background-color: #6e42c1c4 !important; /* Garante o fundo roxo */
+    margin-bottom: 0px !important; /* Remove margem extra abaixo do menu */
+    padding-bottom: 0px !important; /* Evita espaçamentos extras internos */
+}
 
+/* A logo dentro da navbar */
+.navbar-brand img {
+    width: 80px !important; /* Aumenta a largura da logo */
+    height: auto !important; /* Mantém a proporção da imagem */
+    max-height: 80px; /* Garante que não fique maior do que esse valor */
+}
+
+/* Estilo dos links da navbar */
 .navbar .nav-link {
     color: white !important; /* Mantém as letras brancas */
     transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
+/* Efeito ao passar o mouse sobre os links */
 .navbar .nav-link:hover {
     color: #e0e0e0 !important; /* Clareia ao passar o mouse */
     transform: scale(1.05); /* Dá um leve zoom no texto */
 }
 
-.navbar .navbar-brand {
-    color: white !important; /* Mantém a cor da marca branca */
-    font-weight: bold;
-}
-
-.navbar .navbar-brand:hover {
-    color: #e0e0e0 !important; /* Suave efeito ao passar o mouse */
-}
-
+/* Estilo do ícone de carrinho */
 .navbar .fa-shopping-cart {
-    color: #ffffff !important; /* Preto */
-    font-size: 1.8em; /* Tamanho maior para garantir visibilidade */
-    display: inline-block; /* Evita que seja escondido */
+    color: #ffffff !important; /* Garante que o ícone do carrinho tenha cor preta */
+    font-size: 1.8em !important; /* Aumenta o tamanho do ícone */
+    display: inline-block !important; /* Garante que o ícone não seja escondido */
 }
 
-.navbar-nav .nav-item .fa-shopping-cart {
-    color: #ffffff !important;
+/* Garantir que o ícone fique alinhado à direita */
+.navbar-nav .ml-auto {
+    margin-left: auto !important; /* Força o ícone a ir para o lado direito */
 }
 
 

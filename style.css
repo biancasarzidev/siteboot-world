@@ -129,10 +129,10 @@ body {
 }
 
 .card-img-top {
-    height: 200px; /* Ajusta a altura da imagem para algo mais proporcional */
-    width: 100%; /* Garante que a imagem ocupe toda a largura */
-    border-top-left-radius: 15px; /* Deixa as bordas da imagem arredondadas */
-    border-top-right-radius: 15px; /* Deixa as bordas da imagem arredondadas */
+    max-height: 150px; /* Limita a altura da imagem */
+    width: auto; /* Mantém a largura proporcional */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    margin: 0 auto; /* Centraliza a imagem dentro do card */
 }
 
 /*-----FIM DA ÁREA DOS PRODUTOS----*/

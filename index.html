@@ -3,77 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Jogos</title>
+    <title>World Retrô</title>
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-   
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="imagens/logo.png" alt="Logo" style="width: 40px; height: auto;"> World Retrô
-        </a>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="produtos.html">Produtos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="lancamentos.html">Lançamentos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar jogos" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-            </form>
-            <a href="#carrinho" class="ml-3">
-                <i class="fas fa-shopping-cart"></i>
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="imagens/logo.png" alt="Logo" style="width: 40px; height: auto;">
             </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lancamentos.html">Lançamentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar jogos" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                </form>
+                <a href="#carrinho" class="ml-3 text-dark">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
         </div>
     </nav>
 
-   <!-- Tela Inicial / Banner -->
-<div class="container mt-4">
-    <div id="bannerCarousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="imagens/banner1.jpeg" class="d-block w-100" alt="Banner 1">
+    <!-- Tela Inicial / Banner -->
+    <div class="container mt-2"> <!-- Reduzi de mt-4 para mt-2 -->
+        <div id="bannerCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active banner-slide" style="background-image: url('imagens/banner1.jpeg');"></div>
+                <div class="carousel-item banner-slide" style="background-image: url('imagens/banner2.jpeg');"></div>
             </div>
-            <div class="carousel-item">
-                <img src="imagens/banner2.jpeg" class="d-block w-100" alt="Banner 2">
-            </div>
-        
+            <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
         </div>
-        <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-        </a>
     </div>
-</div>
+    
 
-        <!-- Produtos em Destaque -->
-
-        <h2 class="mt-4">Produtos em Destaque</h2>
+    <!-- Produtos em Destaque -->
+    <div class="container mt-4">
+        <h2>Produtos em Destaque</h2>
         <div class="row">
-            <div class="col-md-4 product-card">
+            <div class="col-md-4">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 1">
+                    <img src="imagens/alien.png" class="card-img-top" alt="Produto 1">
                     <div class="card-body">
                         <h5 class="card-title">Produto 1</h5>
                         <p class="card-text">Descrição do Produto 1</p>
@@ -83,9 +75,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 product-card">
+            <div class="col-md-4">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 2">
+                    <img src="imagens/casper.png" class="card-img-top" alt="Produto 2">
                     <div class="card-body">
                         <h5 class="card-title">Produto 2</h5>
                         <p class="card-text">Descrição do Produto 2</p>
@@ -95,9 +87,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 product-card">
+            <div class="col-md-4">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 3">
+                    <img src="imagens/dragons.png" class="card-img-top" alt="Produto 3">
                     <div class="card-body">
                         <h5 class="card-title">Produto 3</h5>
                         <p class="card-text">Descrição do Produto 3</p>
@@ -110,52 +102,36 @@
         </div>
     </div>
 
-    <!-- Tela de Login -->
-    <div class="container mt-4" id="login">
-        <h2>Login</h2>
-        <form>
-            <div class="form-group">
-                <label for="usuario">Usuário</label>
-                <input type="text" class="form-control" id="usuario" placeholder="Seu usuário">
-            </div>
-            <div class="form-group">
-                <label for="senha">Senha</label>
-                <input type="password" class="form-control" id="senha" placeholder="Sua senha">
-            </div>
-            <button type="submit" class="btn btn-primary">Entrar</button>
-        </form>
-    </div>
-
     <!-- Rodapé -->
-<!-- Rodapé -->
-<footer class="footer-custom text-center text-lg-start mt-4">
-    <div class="text-center p-3">
-        <h4>World Retrô</h4>
-        <p>A verdadeira nostalgia dos games.</p>
-        <p>© 2025 World Retrô. Todos os direitos reservados.</p>
-    </div>
-    <div class="footer-social">
-        <h4>Siga-nos</h4>
-        <div class="social-icons">
-            <a href="https://chat.whatsapp.com/Geyjg4HJQiAGIUpkKpJtuf" target="_blank" class="social-icon" aria-label="WhatsApp">
-                <i class="bi bi-whatsapp"></i>
-            </a>
-            <a href="https://www.instagram.com/worldretroart?igsh=Y2JsYzBzcjhycTQz" target="_blank" class="social-icon" aria-label="Instagram">
-                <i class="bi bi-instagram"></i>
-            </a>
-            <a href="#" class="social-icon" aria-label="Telegram">
-                <i class="bi bi-telegram"></i>
-            </a>
-            <a href="#" class="social-icon" aria-label="Facebook">
-                <i class="bi bi-facebook"></i>
-            </a>
+    <footer class="footer-custom text-center text-lg-start mt-4">
+        <div class="container text-center p-3">
+            <h4>World Retrô</h4>
+            <p>A verdadeira nostalgia dos games.</p>
+            <p>© 2025 World Retrô. Todos os direitos reservados.</p>
         </div>
-    </div>
-</footer>
+        <div class="footer-social">
+            <h4>Siga-nos</h4>
+            <div class="social-icons">
+                <a href="https://chat.whatsapp.com/Geyjg4HJQiAGIUpkKpJtuf" target="_blank" class="social-icon" aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/worldretroart?igsh=Y2JsYzBzcjhycTQz" target="_blank" class="social-icon" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Telegram">
+                    <i class="bi bi-telegram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- Versão completa do jQuery -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

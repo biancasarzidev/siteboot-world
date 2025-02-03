@@ -9,23 +9,35 @@ body {
 
 /* Estilo da navbar */
 .navbar {
-    background-color: #6f42c1; /* Fundo roxo */
+    background-color: #6e42c1c4 !important; /* Garante o fundo roxo */
+    margin-bottom: 0px !important; /* Remove margem extra abaixo do menu */
+    padding-bottom: 0px !important; /* Evita espaçamentos extras internos */
 }
 
+.navbar-brand img {
+    width: 80px !important; /* Aumenta a largura da logo */
+    height: auto !important; /* Mantém a proporção da imagem */
+    max-height: 80px; /* Garante que não fique maior do que esse valor */
+}
+
+
 .navbar .nav-link {
-    color: white; /* Cor das letras do menu */
+    color: white !important; /* Mantém as letras brancas */
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .navbar .nav-link:hover {
-    color: #e0e0e0; /* Cor das letras ao passar o mouse */
+    color: #e0e0e0 !important; /* Clareia ao passar o mouse */
+    transform: scale(1.05); /* Dá um leve zoom no texto */
 }
 
 .navbar .navbar-brand {
-    color: white; /* Cor da marca */
+    color: white !important; /* Mantém a cor da marca branca */
+    font-weight: bold;
 }
 
 .navbar .navbar-brand:hover {
-    color: #e0e0e0; /* Cor da marca ao passar o mouse */
+    color: #e0e0e0 !important; /* Suave efeito ao passar o mouse */
 }
 
 /*-----FIM DA ÁREA DO MENU----*/
@@ -42,56 +54,130 @@ body {
     color: #343a40;
 }
 
+.banner-slide {
+    height: 400px; /* Altura fixa para o banner */
+    background-size: contain; /* Exibe toda a imagem sem cortes */
+    background-position: center; /* Mantém o foco no centro da imagem */
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
 .carousel-item img {
-    height: 400px; /* Ajuste a altura do banner */
-    width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
-    object-fit: contain; /* Ajusta a imagem sem cortá-la */
+    height: 400px;
+    width: 100%;
+    object-fit: cover; /* Ajusta a imagem sem deixar bordas vazias */
+    max-height: 400px; /* Evita que a imagem fique muito grande em telas menores */
+}
+
+.container.mt-2 {
+    margin-top: 10px !important; /* Reduz o espaço acima do banner */
 }
 
 /*-----FIM DA ÁREA DO BANNER----*/
 
+
+/*-----ÁREA DOS PRODUTOS----*/
+
 .product-card {
-    margin: 15px;
+    margin-bottom: 1.5rem; /* Mantém espaçamento entre os cards */
 }
+
+.card {
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: rgba(255, 255, 255, 0.443); /* Fundo branco para os cards */
+    color: black; /* Cor do texto para melhor visibilidade */
+}
+
+.card-body {
+    background-color: rgba(255, 255, 255, 0.744); /* Garante que a área de texto tenha fundo claro */
+    color: black;
+    padding: 15px;
+}
+
+.card-title, .card-text {
+    color: black; /* Garante que o título e a descrição sejam visíveis */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efeito sutil ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* Sombra branca leve */
+}
+
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-img-top {
+    height: 180px; /* Define uma altura fixa menor */
+    object-fit: contain; /* Mantém a proporção sem cortar partes da imagem */
+    padding: 10px; /* Adiciona um pequeno espaço ao redor */
+}
+
+
+/*-----FIM DA ÁREA DOS PRODUTOS----*/
+
 
 /*-----ÁREA DO FOOTER E ÍCONES----*/
-
-.footer-social {
-    margin-top: 20px;
-}
-
-
-.social-icon:hover {
-    color: #007bff; /* Cor ao passar o mouse */
-}
 
 .footer-custom {
     background-color: #6f42c1; /* Cor de fundo roxa */
     color: white; /* Cor do texto branca */
+    padding: 20px 0;
 }
 
 .footer-custom a {
     color: white; /* Cor dos links brancos */
+    transition: color 0.3s ease-in-out;
 }
 
 .footer-custom a:hover {
     color: #e0e0e0; /* Cor dos links ao passar o mouse */
 }
 
+.footer-social {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os ícones sociais */
+}
+
 .footer-social h4 {
-    margin-top: 20px; /* Espaçamento superior para o título "Siga-nos" */
+    margin-bottom: 10px; /* Reduzi o espaçamento para melhor alinhamento */
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 15px; /* Espaçamento entre os ícones */
 }
 
 .social-icon {
-    font-size: 24px; /* Tamanho dos ícones */
-    color: white; /* Cor dos ícones */
-    text-decoration: none; /* Remove o sublinhado */
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
 }
 
 /*-----FIM DA ÁREA DO FOOTER E ÍCONES----*/
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 250px; /* Ajusta a altura do banner para telas menores */
+        max-height: 250px;
+    }
+
+    .banner-slide {
+        height: 250px; /* Ajuste de altura para telas menores */
+    }
+
+    .card-img-top {
+        height: 140px; /* Reduz ainda mais em telas pequenas */
+    }
+}

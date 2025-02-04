@@ -168,7 +168,7 @@ body {
 
 /* Estilização do formulário de calcular frete */
 #form-frete {
-    background-color: #f8f9fa; /* Fundo claro para destacar o formulário */
+    background-color: #f8f9fa51; /* Fundo claro para destacar o formulário */
     padding: 20px; /* Espaçamento interno */
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
@@ -357,7 +357,7 @@ body {
 
 .footer-info {
     text-align: left; /* Alinha o texto à esquerda */
-    max-width: 50%; /* Define um tamanho adequado */
+    flex-basis: 45%; /* Define um tamanho adequado */
 }
 
 .footer-custom a {
@@ -370,8 +370,11 @@ body {
 }
 
 .footer-social {
-    text-align: right; /* Alinha os ícones à direita */
-    max-width: 50%; /* Garante que as redes sociais ocupem metade da largura */
+    display: flex;
+    flex-direction: column; /* Garante que o título e os ícones fiquem em coluna */
+    align-items: center; /* Alinha os ícones e o título centralizados */
+    flex-basis: 45%; /* Define um tamanho adequado para as redes sociais */
+    text-align: center; /* Centraliza o texto no rodapé */
 }
 
 .footer-social h4 {
@@ -381,6 +384,7 @@ body {
 .social-icons {
     display: flex;
     gap: 15px; /* Espaçamento entre os ícones */
+    justify-content: center; /* Centraliza os ícones horizontalmente */
 }
 
 .social-icon {

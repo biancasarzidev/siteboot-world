@@ -260,11 +260,15 @@ body {
 }
 
 .card {
+    display: flex;
+    flex-direction: column; /* Garante que o conteúdo dentro do card seja empilhado */
+    height: 100%; /* Faz com que o card ocupe toda a altura disponível */
     border-radius: 15px; /* Bordas mais arredondadas para um visual mais suave */
     background-color: rgba(255, 255, 255, 0.85); /* Fundo branco suave com transparência */
     color: #343a40; /* Cor do texto para melhor visibilidade */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave no hover */
+    min-height: 350px; /* Garante que os cards tenham uma altura mínima */
 }
 
 .card-body {
@@ -272,6 +276,7 @@ body {
     color: #343a40; /* Cor do texto harmonizada com a marca */
     padding: 20px; /* Aumenta o espaço interno */
     text-align: center; /* Alinha o texto centralizado para dar um toque moderno */
+    flex-grow: 1; /* Faz com que o conteúdo do card se ajuste automaticamente */
 }
 
 .card-title {

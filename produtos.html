@@ -38,7 +38,7 @@
                         <h5 class="card-title">Doom (Hack + Oficial)</h5>
                         <p class="card-text">O PROJETO ACOMPANHA 02 MÍDIAS, UMA HACK QUE ACEITA ALTERAÇÃO, MELHORA FPS E AUMENTO DE TELA. E TAMBÉM ACOMPANHA A MÍDIA OFICIAL DO JOGO. Game prensado LongBox em caixa de papelão / Case acrílica / Mídia prata espelhada prensada industrialmente / Manual / Encartes / Selo / Lacrado de fábrica (novo).</p>
                         <p class="card-text">R$ 110,00</p>
-                        <button class="btn btn-primary" onclick="adicionarAoCarrinho('Produto 1', 110.00)">Adicionar ao Carrinho</button>
+                        <button onclick="adicionarAoCarrinho('Doom - Hack + Oficial', 110.00, 'imagens/doom.png')">Adicionar ao Carrinho</button>
                     </div>
                 </div>
                 <!-- Produto 2 -->
@@ -48,7 +48,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Produto 2</h5>
                             <p class="card-text">R$ 59,99</p>
-                            <button class="btn btn-primary" onclick="adicionarAoCarrinho('Produto 2', 59.99, 'imagens/produto2.jpg')">Adicionar ao Carrinho</button>
+                            <button onclick="adicionarAoCarrinho('Nome do Produto', 100, 'imagens/produto.jpg')">Adicionar ao Carrinho</button>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Produto 3</h5>
                             <p class="card-text">R$ 129,99</p>
-                            <button class="btn btn-primary" onclick="adicionarAoCarrinho('Produto 3', 129.99, 'imagens/produto3.jpg')">Adicionar ao Carrinho</button>
+                            <!-- Produto -->
+                            <button onclick="adicionarAoCarrinho('Nome do Produto', 100, 'imagens/produto.jpg')">Adicionar ao Carrinho</button>
                         </div>
                     </div>
                 </div>
@@ -72,26 +73,23 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         // Função para adicionar o produto ao carrinho
-        function adicionarAoCarrinho(nome, preco, imagem) {
-            // Criando o objeto do produto
-            let produto = {
-                nome: nome,
-                preco: preco,
-                imagem: imagem
-            };
+    function adicionarAoCarrinho(nomeProduto, precoProduto, imagemProduto) {
+        // Criar objeto do produto
+        const produto = {
+            nome: nomeProduto,
+            preco: precoProduto,
+            imagem: imagemProduto
+        };
 
-            // Obtendo o carrinho do localStorage ou criando um novo caso esteja vazio
-            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-            
-            // Adicionando o novo produto
-            carrinho.push(produto);
+        // Recuperar o carrinho do LocalStorage (se já existir)
+        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-            // Atualizando o carrinho no localStorage
-            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        // Adicionar o produto ao carrinho
+        carrinho.push(produto);
 
-            // Exibindo uma mensagem de sucesso (pode ser um alert ou uma notificação na página)
-            alert('Produto adicionado ao carrinho!');
-        }
+        // Salvar o carrinho de volta no LocalStorage
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    }
     </script>
 </body>
 </html>

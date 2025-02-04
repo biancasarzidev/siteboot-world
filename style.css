@@ -286,31 +286,84 @@ body {
 /*-----FIM DA ÁREA DO FOOTER E ÍCONES----*/
 
 /* Responsividade */
+/* Responsividade para a área dos produtos */
 @media (max-width: 768px) {
-    .carousel-item img {
-        height: 250px; /* Ajusta a altura do banner para telas menores */
-        max-height: 250px;
+    .product-card {
+        margin-bottom: 1rem; /* Menor espaçamento entre os cards */
     }
 
-    .container.d-flex {
-        flex-direction: column; /* Empilha os elementos verticalmente em telas menores */
-        align-items: flex-start; /* Mantém alinhado à esquerda */
+    .card {
+        margin-bottom: 1.5rem; /* Ajusta o espaçamento entre os cards em dispositivos móveis */
     }
 
-    .banner-slide {
-        height: 250px; /* Ajuste de altura para telas menores */
+    /* Cards ocupando a largura total em telas pequenas */
+    .card-body {
+        padding: 15px; /* Menos espaçamento no conteúdo do card */
+    }
+
+    .card-title {
+        font-size: 1.1rem; /* Menor tamanho de fonte para o título */
+    }
+
+    .card-price {
+        font-size: 1.1rem; /* Ajuste para o preço também */
+    }
+
+    /* Responsividade no botão de "Adicionar ao Carrinho" */
+    .btn {
+        font-size: 1rem; /* Ajuste para que o botão não fique grande demais */
+        padding: 8px 15px; /* Tamanho mais adequado para telas pequenas */
     }
 
     .card-img-top {
-        height: 140px; /* Reduz ainda mais em telas pequenas */
+        height: 120px; /* Limita a altura das imagens */
+        object-fit: contain; /* Garante que a imagem seja adaptada sem cortar */
     }
 
+    /* Ajustes na navbar */
+    .navbar-brand img {
+        width: 60px; /* Ajuste da logo para telas pequenas */
+        max-height: 60px; /* Limita a altura da logo */
+    }
+
+    /* Botões de carrinho e "finalizar compra" em telas pequenas */
+    .btn-success, .btn-danger {
+        font-size: 0.9rem; /* Ajuste de tamanho de fonte para botões */
+        padding: 8px 15px; /* Ajuste de padding nos botões */
+    }
+
+    .btn-success, .btn-danger {
+        width: 100%; /* Garante que ocupem toda a largura do container */
+        margin-bottom: 10px; /* Espaçamento entre os botões */
+    }
+
+    /* Estilo para o banner em telas pequenas */
+    .carousel-item img {
+        height: 200px; /* Menor altura para o banner */
+        max-height: 200px; /* Garante que o banner não ocupe muito espaço */
+    }
+
+    .banner-slide {
+        height: 200px; /* Ajuste da altura do banner */
+    }
+
+    /* Ajustes no layout do footer */
     .footer-info, .footer-social {
-        max-width: 100%; /* Garante que ocupem toda a largura disponível */
-        text-align: left; /* Deixa tudo alinhado à esquerda em telas pequenas */
+        text-align: left; /* Alinha os textos à esquerda */
+        max-width: 100%; /* Garante que o footer ocupe toda a largura disponível */
     }
 
+    /* Ajustes nos ícones sociais */
     .social-icons {
-        margin-top: 10px; /* Espaço extra entre os blocos */
+        gap: 10px; /* Menos espaçamento entre os ícones */
+    }
+
+    /* Ajustes gerais para os produtos em telas pequenas */
+    .col-md-3 {
+        flex: 0 0 100%; /* Faz com que os produtos ocupem toda a largura da tela */
+        max-width: 100%; /* Impede que fiquem sobrepostos */
+        padding-left: 0;
+        padding-right: 0;
     }
 }
+

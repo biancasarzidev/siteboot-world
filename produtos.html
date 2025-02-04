@@ -50,10 +50,24 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         // Função para adicionar o produto ao carrinho
-        function adicionarAoCarrinho(nome, preco) {
+        function adicionarAoCarrinho(nome, preco, imagem) {
+            // Criando o objeto do produto
+            let produto = {
+                nome: nome,
+                preco: preco,
+                imagem: imagem
+            };
+
+            // Obtendo o carrinho do localStorage ou criando um novo caso esteja vazio
             let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-            carrinho.push({ nome, preco });
+            
+            // Adicionando o novo produto
+            carrinho.push(produto);
+
+            // Atualizando o carrinho no localStorage
             localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+            // Exibindo uma mensagem de sucesso (pode ser um alert ou uma notificação na página)
             alert('Produto adicionado ao carrinho!');
         }
     </script>

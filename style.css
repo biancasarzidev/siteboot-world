@@ -66,28 +66,29 @@ body {
 /* Estilo do container do carrinho */
 #carrinho {
     margin-top: 20px;
-    color: white; /* Texto branco no carrinho */
+    color: white; /* Cor do texto dentro do carrinho */
 }
 
 /* Estilo do título "Carrinho de Compras" */
 #carrinho h2 {
-    color: #fefefe; /* Cor roxa para o título */
-    font-size: 2rem; /* Tamanho maior para o título */
+    color: #fefefe;
+    font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 20px; /* Espaço abaixo do título */
 }
 
 /* Estilos para a tabela de produtos */
 .table {
-    background-color: #333; /* Fundo escuro para a tabela */
-    border: 1px solid #ffffff; /* Borda roxa para destacar */
-    color: white; /* Texto branco na tabela */
-    margin-top: 20px;
+    background-color: #333;
+    border: 1px solid #ffffff;
+    color: white;
+    margin-bottom: 20px; /* Espaço abaixo da tabela */
     border-radius: 10px;
 }
 
 .table th, .table td {
-    font-size: 1.1rem; /* Tamanho maior da fonte */
-    padding: 10px; /* Mais espaço dentro das células */
+    font-size: 1.1rem;
+    padding: 10px;
 }
 
 .table th {
@@ -102,17 +103,17 @@ body {
 
 /* Estilo para o total */
 #total {
-    color: #ffffff; /* Cor roxa para o total */
+    color: #ffffff;
     font-weight: bold;
-    font-size: 1.5rem; /* Tamanho maior para destacar o total */
-    margin-top: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* Espaçamento abaixo do total */
 }
 
 /* Estilos para os botões */
 .btn {
-    font-size: 1rem; /* Tamanho confortável da fonte */
-    padding: 10px 20px; /* Mais espaçamento nos botões */
-    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 .btn-success {
@@ -135,6 +136,23 @@ body {
 
 .btn-danger:hover {
     background-color: #c82333; /* Escurece o botão ao passar o mouse */
+}
+
+/* Ajuste de layout para a área total e botão */
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.d-flex .btn {
+    width: 48%; /* Tamanho dos botões em proporção para que fiquem ao lado */
+}
+
+.d-flex #total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6e42c1;
 }
 
 /*-----FIM DA ÁREA CARRINHO DE COMPRAS----*/

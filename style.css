@@ -406,7 +406,7 @@ body {
 
 /*-----FIM DA ÁREA DO FOOTER E ÍCONES----*/
 
-/* ---- Responsividade -----*/
+/* ---- Responsividade ----- */
 @media (max-width: 768px) {
 
     /* Vídeo deve ocupar toda a tela no celular */
@@ -414,6 +414,7 @@ body {
         height: 220px; /* Reduz a altura do vídeo para se ajustar melhor ao celular */
     }
 
+    /* Cards (Produtos) */
     .card {
         min-height: 300px; /* Torna os cards um pouco menores em telas menores */
     }
@@ -438,9 +439,8 @@ body {
     .product-card {
         margin-bottom: 1.5rem; /* Menos espaço entre os cards em telas menores */
     }
-    
-    /* Cards ocupando a largura total em telas pequenas */
 
+    /* Cards ocupando a largura total em telas pequenas */
     .card-title {
         font-size: 1.1rem; /* Menor tamanho de fonte para o título */
     }
@@ -514,5 +514,13 @@ body {
     #form-frete .col-md-4 {
         margin-bottom: 10px; /* Reduz o espaçamento entre os campos em telas menores */
     }
+
+    /* Cards lado a lado para tela pequena, ajustados em colunas */
+    .col-md-6 {
+        flex: 0 0 48%; /* Coloca os cards lado a lado em telas menores */
+        max-width: 48%;
+        margin-bottom: 1.5rem; /* Menos espaço entre os cards */
+    }
 }
+
 

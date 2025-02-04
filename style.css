@@ -111,16 +111,21 @@ body {
 
 /* Estilos para os botões */
 .btn {
-    font-size: 1rem;
-    padding: 10px 20px;
-    border-radius: 5px;
+    font-size: 1rem; /* Tamanho confortável da fonte */
+    padding: 10px 20px; /* Aumenta o espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
 }
 
 .btn-success {
-    background-color: #28a745; /* Verde para o botão de finalizar compra */
+    background-color: #28a745; /* Cor do botão de finalizar compra */
     border-color: #28a745;
     color: white;
-    transition: background-color 0.3s ease;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Cor do botão de continuar comprando */
+    border-color: #6c757d;
+    color: white;
 }
 
 .btn-success:hover {
@@ -139,10 +144,14 @@ body {
 }
 
 /* Ajuste de layout para a área total e botão */
+.w-48 {
+    width: 48%;  /* Faz os botões ocuparem 48% da largura cada, com um espaço de 4% entre eles */
+}
+
 .d-flex {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Centraliza os botões verticalmente */
 }
 
 .d-flex .btn {
@@ -164,6 +173,17 @@ body {
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
     margin-bottom: 20px; /* Espaço abaixo do formulário */
+    max-width: 600px; /* Limita a largura do formulário */
+    margin-left: auto; /* Centraliza o formulário */
+    margin-right: auto; /* Centraliza o formulário */
+}
+
+/* Centralizar o título h5 e aumentar o tamanho */
+#form-frete h5 {
+    text-align: center; /* Centraliza o título */
+    font-size: 1.8rem; /* Tamanho maior do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-weight: bold; /* Deixa o título em negrito */
 }
 
 #form-frete .form-row {
@@ -185,6 +205,7 @@ body {
     border-radius: 5px; /* Bordas arredondadas */
     font-size: 1rem; /* Tamanho confortável da fonte */
     transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+    width: 100%; /* Faz o botão ocupar 100% da largura disponível */
 }
 
 #form-frete .btn-primary:hover {

@@ -157,6 +157,48 @@ body {
 
 /*-----FIM DA ÁREA CARRINHO DE COMPRAS----*/
 
+/* Estilização do formulário de calcular frete */
+#form-frete {
+    background-color: #f8f9fa; /* Fundo claro para destacar o formulário */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+    margin-bottom: 20px; /* Espaço abaixo do formulário */
+}
+
+#form-frete .form-row {
+    display: flex;
+    flex-wrap: wrap; /* Garante que os elementos se ajustem em telas menores */
+}
+
+#form-frete .form-control {
+    font-size: 1rem; /* Tamanho confortável para o texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Aumenta o espaçamento interno */
+}
+
+#form-frete .btn-primary {
+    background-color: #6e42c1; /* Cor roxa para o botão */
+    border-color: #6e42c1; /* Cor da borda roxa */
+    color: white; /* Cor do texto branco */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho confortável da fonte */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+#form-frete .btn-primary:hover {
+    background-color: #5a2d9a; /* Cor escura para o efeito de hover */
+    border-color: #5a2d9a; /* Cor da borda mais escura */
+}
+
+#frete-info {
+    color: #28a745; /* Cor verde para exibir o valor do frete */
+    font-size: 1.2rem; /* Tamanho de fonte adequado */
+    font-weight: bold; /* Negrito para o valor */
+    margin-top: 15px; /* Espaço entre o valor do frete e o formulário */
+}
+
 /*-----ÁREA DO BANNER----*/
 .banner {
     height: 300px;
@@ -382,6 +424,15 @@ body {
         max-width: 100%; /* Impede que fiquem sobrepostos */
         padding-left: 0;
         padding-right: 0;
+    }
+
+    #form-frete .form-row {
+        flex-direction: column; /* Empilha os campos em telas menores */
+    }
+
+    #form-frete .col-md-8,
+    #form-frete .col-md-4 {
+        margin-bottom: 10px; /* Reduz o espaçamento entre os campos em telas menores */
     }
 }
 

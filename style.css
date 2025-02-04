@@ -409,17 +409,30 @@ body {
 /* ---- Responsividade -----*/
 @media (max-width: 768px) {
 
+    /* Vídeo deve ocupar toda a tela no celular */
+    .video-container iframe {
+        height: 220px; /* Reduz a altura do vídeo para se ajustar melhor ao celular */
+    }
+
     .card {
         min-height: 300px; /* Torna os cards um pouco menores em telas menores */
+    }
+
+    /* Garantir que os cards fiquem em linha em dispositivos menores */
+    .row {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os cards se movam para baixo, se necessário */
     }
 
     .card-body {
         padding: 10px; /* Menos espaçamento interno para telas menores */
     }
 
+    /* Ajustar os cards para ficarem lado a lado */
     .col-md-6 {
-        flex: 0 0 48%; /* Faz com que dois cards ocupem 48% da largura disponível */
+        flex: 0 0 48%; /* Faz com que os cards ocupem 48% da largura disponível */
         max-width: 48%; /* Limita a largura máxima dos cards */
+        margin-bottom: 1.5rem; /* Menos espaço entre os cards */
     }
 
     .product-card {

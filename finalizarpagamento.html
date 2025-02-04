@@ -53,7 +53,7 @@
             </div>
             <div class="form-group">
                 <label for="numero-cartao">Número do Cartão</label>
-                <input type="number" class="form-control" id="numero-cartao" placeholder="Número do cartão" required maxlength="16">
+                <input type="text" class="form-control" id="numero-cartao" placeholder="Número do cartão" required maxlength="16" oninput="validarNumeroCartao(this)">
             </div>
             <div class="form-group">
                 <label for="validade-cartao">Validade</label>
@@ -114,5 +114,16 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Função para validar o número do cartão
+        function validarNumeroCartao(input) {
+            // Adicionar lógica de validação para o número do cartão
+            let numero = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+            if (numero.length > 16) {
+                input.value = numero.substring(0, 16); // Limita a 16 dígitos
+            }
+        }
+    </script>
 </body>
 </html>

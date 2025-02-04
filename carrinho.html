@@ -56,7 +56,7 @@
             <a href="produtos.html" class="btn btn-secondary w-48">Continuar Comprando</a>
 
             <!-- Botão de Finalizar Compra -->
-            <button class="btn btn-success w-48">Finalizar Compra</button>
+            <button class="btn btn-success w-100" onclick="finalizarCompra()">Finalizar Compra</button>
         </div>
     </div>
 
@@ -162,6 +162,24 @@
         function calcularFreteSimulado(cep) {
             // Simulação do cálculo de frete com base no CEP
             return Math.random() * 50 + 10; // Gera um valor aleatório entre R$ 10,00 e R$ 60,00
+        }
+
+        function finalizarCompra() {
+        // Obtendo o carrinho do LocalStorage
+        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+        let total = 0;
+
+        // Calculando o total do carrinho
+        carrinho.forEach(produto => {
+            total += produto.preco;
+        });
+
+        // Salvando os dados do carrinho e o total no LocalStorage
+        localStorage.setItem('totalCompra', total.toFixed(2));
+        localStorage.setItem('carrinhoFinalizado', JSON.stringify(carrinho));
+
+        // Redirecionando para a página de pagamento
+        window.location.href = 'finalizar-pagamento.html';
         }
     </script>
 </body>

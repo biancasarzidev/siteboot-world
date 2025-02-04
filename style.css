@@ -61,6 +61,85 @@ body {
 
 /*-----FIM DA ÁREA DO MENU----*/
 
+/*-----CARRINHO DE COMPRAS----*/
+
+/* Estilo do container do carrinho */
+#carrinho {
+    margin-top: 20px;
+    color: white; /* Texto branco no carrinho */
+}
+
+/* Estilo do título "Carrinho de Compras" */
+#carrinho h2 {
+    color: #fefefe; /* Cor roxa para o título */
+    font-size: 2rem; /* Tamanho maior para o título */
+    font-weight: bold;
+}
+
+/* Estilos para a tabela de produtos */
+.table {
+    background-color: #333; /* Fundo escuro para a tabela */
+    border: 1px solid #ffffff; /* Borda roxa para destacar */
+    color: white; /* Texto branco na tabela */
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.table th, .table td {
+    font-size: 1.1rem; /* Tamanho maior da fonte */
+    padding: 10px; /* Mais espaço dentro das células */
+}
+
+.table th {
+    background-color: #6e42c1; /* Cor de fundo roxa para os cabeçalhos */
+    color: white; /* Texto branco no cabeçalho */
+}
+
+.table td {
+    background-color: #444; /* Fundo mais escuro para as células */
+    color: #ddd; /* Cor mais clara para o texto dentro da tabela */
+}
+
+/* Estilo para o total */
+#total {
+    color: #ffffff; /* Cor roxa para o total */
+    font-weight: bold;
+    font-size: 1.5rem; /* Tamanho maior para destacar o total */
+    margin-top: 20px;
+}
+
+/* Estilos para os botões */
+.btn {
+    font-size: 1rem; /* Tamanho confortável da fonte */
+    padding: 10px 20px; /* Mais espaçamento nos botões */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.btn-success {
+    background-color: #28a745; /* Verde para o botão de finalizar compra */
+    border-color: #28a745;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Escurece o botão ao passar o mouse */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Vermelho para o botão de remover */
+    border-color: #dc3545;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Escurece o botão ao passar o mouse */
+}
+
+/*-----FIM DA ÁREA CARRINHO DE COMPRAS----*/
+
+
 
 /*-----ÁREA DO BANNER----*/
 .banner {

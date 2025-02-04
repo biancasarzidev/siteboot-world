@@ -38,6 +38,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">Imagem</th> <!-- Coluna para a imagem -->
                     <th scope="col">Produto</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Ação</th>
@@ -91,11 +92,12 @@
 
             // Adicionando os itens à tabela
             if (carrinho.length === 0) {
-                carrinhoTabela.innerHTML = `<tr><td colspan="3">Seu carrinho está vazio.</td></tr>`;
+                carrinhoTabela.innerHTML = `<tr><td colspan="4">Seu carrinho está vazio.</td></tr>`;
             } else {
                 carrinho.forEach((produto, index) => {
                     let tr = document.createElement('tr');
                     tr.innerHTML = `
+                        <td><img src="${produto.imagem}" alt="${produto.nome}" style="width: 50px; height: auto;"></td> <!-- Imagem do produto -->
                         <td>${produto.nome}</td>
                         <td>R$ ${produto.preco.toFixed(2)}</td>
                         <td><button class="btn btn-danger" onclick="removerDoCarrinho(${index})">Remover</button></td>

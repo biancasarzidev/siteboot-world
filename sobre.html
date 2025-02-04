@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <title>Sobre</title>
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -35,27 +35,21 @@
         </div>
     </nav>
 
-     <!-- Tela de Contato -->
-     <div class="container mt-4" id="contato">
-        <h2>Contato</h2>
-        <form action="processar_contato.php" method="POST"> <!-- Ação e método de envio -->
-            <div class="form-group">
-                <label for="nome">Nome</label>
-                <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+    <!-- Seção Sobre -->
+    <section id="sobre" class="container py-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>Sobre Nós</h2>
+                <p>Bem-vindo ao nosso site! Somos uma empresa dedicada a oferecer as melhores soluções para você. Nossa missão é fornecer produtos e serviços de qualidade, com foco na satisfação do cliente.</p>
+                <p>Com uma equipe altamente qualificada e apaixonada pelo que faz, buscamos sempre inovação e excelência no que entregamos. Estamos comprometidos em ser a escolha número um para nossos clientes.</p>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Seu email" required>
+            <div class="col-lg-6">
+                <img src="imagens/pix.png" alt="Imagem sobre a empresa" class="img-fluid">
             </div>
-            <div class="form-group">
-                <label for="mensagem">Mensagem</label>
-                <textarea class="form-control" id="mensagem" rows="3" placeholder="Sua mensagem" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-    </div>
-
-  <!-- Rodapé -->
+        </div>
+    </section>
+    
+    <!-- Rodapé -->
   <footer class="footer-custom text-lg-start mt-5">
     <div class="container d-flex justify-content-between align-items-center flex-wrap p-3">
         <div class="footer-info" style="flex-basis: 45%;">
@@ -87,6 +81,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    
 </body>
 </html>

@@ -354,17 +354,19 @@ body {
 
 /*-----ÁREA DO FOOTER E ÍCONES----*/
 
+/* Estilo geral do Footer */
 .footer-custom {
     background-color: #6f42c1; /* Fundo roxo */
     color: white; /* Texto branco */
     padding: 20px 0;
 }
 
+/* Estilo das informações do Footer */
 .footer-info {
     text-align: left; /* Alinha o texto à esquerda */
-    flex-basis: 45%; /* Define um tamanho adequado */
 }
 
+/* Estilo dos links no Footer */
 .footer-custom a {
     color: white; /* Cor dos links brancos */
     transition: color 0.3s ease-in-out;
@@ -374,22 +376,19 @@ body {
     color: #e0e0e0; /* Cor dos links ao passar o mouse */
 }
 
+/* Estilo para os ícones sociais */
 .footer-social {
-    display: flex;
-    flex-direction: column; /* Garante que o título e os ícones fiquem em coluna */
-    align-items: center; /* Alinha os ícones e o título centralizados */
-    flex-basis: 45%; /* Define um tamanho adequado para as redes sociais */
-    text-align: center; /* Centraliza o texto no rodapé */
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
 .footer-social h4 {
-    margin-bottom: 10px; /* Reduzi o espaçamento para melhor alinhamento */
+    margin-bottom: 10px; /* Espaçamento entre o título e os ícones */
 }
 
+/* Estilo para os ícones sociais */
 .social-icons {
     display: flex;
-    gap: 15px; /* Espaçamento entre os ícones */
-    justify-content: center; /* Centraliza os ícones horizontalmente */
+    gap: 20px; /* Espaçamento entre os ícones */
 }
 
 .social-icon {
@@ -405,6 +404,48 @@ body {
 }
 
 /*-----FIM DA ÁREA DO FOOTER E ÍCONES----*/
+
+/* Responsividade para telas grandes (desktop) */
+@media (min-width: 769px) {
+    .footer-custom .container {
+        display: flex;
+        justify-content: space-between; /* Distribui as colunas igualmente */
+        align-items: center; /* Alinha os itens no centro */
+        gap: 20px; /* Espaçamento entre as colunas */
+    }
+
+    .footer-info {
+        flex: 1; /* Ocupa o espaço restante */
+        max-width: 45%; /* Define o tamanho da área de informações */
+        text-align: left; /* Alinha as informações à esquerda */
+    }
+
+    .footer-social {
+        flex: 1; /* Ocupa o espaço restante */
+        max-width: 45%; /* Define o tamanho da área social */
+        display: flex;
+        justify-content: flex-start; /* Alinha os ícones sociais à esquerda */
+        text-align: left; /* Alinha os ícones sociais à esquerda */
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 20px; /* Espaçamento entre os ícones */
+        justify-content: flex-start; /* Alinha os ícones à esquerda */
+    }
+
+    .social-icon {
+        font-size: 24px; /* Tamanho dos ícones */
+        color: white; /* Cor dos ícones */
+        text-decoration: none; /* Remove o sublinhado */
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icon:hover {
+        color: #d1d1d1; /* Muda a cor ao passar o mouse */
+        transform: scale(1.2); /* Dá um pequeno zoom ao passar o mouse */
+    }
+}
 
 /* ---- Responsividade ----- */
 @media (max-width: 768px) {
@@ -467,15 +508,25 @@ body {
         margin-bottom: 10px; /* Espaçamento entre os botões */
     }
 
-    /* Ajustes no layout do footer */
-    .footer-info, .footer-social {
-        text-align: left; /* Alinha os textos à esquerda */
-        max-width: 100%; /* Garante que o footer ocupe toda a largura disponível */
+    .footer-custom {
+        padding: 15px 0;
     }
 
-    /* Ajustes nos ícones sociais */
-    .social-icons {
+    /* Flexbox para garantir que os elementos do footer fiquem empilhados em telas pequenas */
+    .footer-info, .footer-social {
+        flex-basis: 100%; /* Faz com que ocupe toda a largura disponível */
+        text-align: center; /* Centraliza o texto no celular */
+        margin-bottom: 15px; /* Espaçamento entre as seções do footer */
+    }
+
+     /* Ajuste de tamanhos dos ícones no celular */
+     .social-icons {
+        justify-content: center; /* Centraliza os ícones sociais */
         gap: 10px; /* Menos espaçamento entre os ícones */
+    }
+
+    .social-icon {
+        font-size: 30px; /* Aumenta o tamanho dos ícones no celular */
     }
 
     /* Ajustes gerais para os produtos em telas pequenas */
@@ -502,6 +553,27 @@ body {
         justify-content: space-between;
         gap: 1rem;
         margin-top: 30px; /* Espaço entre o vídeo e os cards */
+    }
+}
+
+/* Responsividade usando o sistema de grid do Bootstrap */
+@media (min-width: 768px) {
+    .footer-custom .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; /* Garante que os itens do footer se ajustem em telas pequenas */
+    }
+
+    /* Estilo do footer no desktop */
+    .footer-info {
+        flex-basis: 45%;
+    }
+
+    .footer-social {
+        flex-basis: 45%;
+        display: flex;
+        justify-content: flex-start;
     }
 }
 

@@ -294,6 +294,37 @@ body {
 
 /*-----FIM DA ÁREA DOS PRODUTOS----*/
 
+/* Estilo para Formulário de Pagamento */
+#form-pagamento {
+    background-color: #f8f9fa; /* Fundo suave */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px; /* Espaço abaixo do formulário */
+}
+
+#form-pagamento .form-control {
+    font-size: 1rem; /* Tamanho confortável da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Aumenta o espaçamento interno */
+}
+
+#form-pagamento .btn {
+    font-size: 1.1rem; /* Tamanho do botão */
+    padding: 12px 20px; /* Mais espaçamento nos botões */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+#form-pagamento .btn-primary {
+    background-color: #6e42c1; /* Cor roxa */
+    border-color: #6e42c1; /* Cor da borda */
+    color: white; /* Texto branco */
+}
+
+#form-pagamento .btn-primary:hover {
+    background-color: #5a2d9a; /* Cor mais escura ao passar o mouse */
+}
+
 
 /*-----ÁREA DO FOOTER E ÍCONES----*/
 

@@ -406,10 +406,10 @@ body {
 
 /*-----FIM DA ÁREA DO FOOTER E ÍCONES----*/
 
-/* ---- Responsividade ----- */
+/* ----- Responsividade ----- */
 @media (max-width: 768px) {
 
-    /* Vídeo deve ocupar toda a tela no celular */
+    /* Ajuste para o vídeo no celular */
     .video-container iframe {
         height: 220px; /* Reduz a altura do vídeo para se ajustar melhor ao celular */
     }
@@ -423,10 +423,6 @@ body {
     .row {
         display: flex;
         flex-wrap: wrap; /* Permite que os cards se movam para baixo, se necessário */
-    }
-
-    .card-body {
-        padding: 10px; /* Menos espaçamento interno para telas menores */
     }
 
     /* Ajustar os cards para ficarem lado a lado */
@@ -515,11 +511,26 @@ body {
         margin-bottom: 10px; /* Reduz o espaçamento entre os campos em telas menores */
     }
 
-    /* Cards lado a lado para tela pequena, ajustados em colunas */
-    .col-md-6 {
-        flex: 0 0 48%; /* Coloca os cards lado a lado em telas menores */
-        max-width: 48%;
-        margin-bottom: 1.5rem; /* Menos espaço entre os cards */
+    /* Centralização do formulário de calcular frete */
+    #form-frete {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza o conteúdo do formulário */
+        justify-content: center;
+        margin: 0 auto; /* Garante que o formulário esteja centralizado na tela */
+        max-width: 100%; /* Garante que o formulário ocupe toda a largura disponível */
+    }
+
+    /* Ajuste do título "Calcular Frete" */
+    #form-frete h5 {
+        text-align: center; /* Centraliza o título */
+        font-size: 1.5rem; /* Aumenta o tamanho do título */
+        margin-bottom: 20px;
+    }
+
+    /* Ajuste no formulário de calcular frete */
+    #form-frete .form-control {
+        width: 100%; /* Garante que os campos ocupem toda a largura disponível */
     }
 }
 

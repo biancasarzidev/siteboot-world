@@ -406,33 +406,29 @@ body {
 
 /*-----FIM DA ÁREA DO FOOTER E ÍCONES----*/
 
-/* ----- Responsividade ----- */
+/* ---- Responsividade ----- */
 @media (max-width: 768px) {
 
     /* Vídeo deve ocupar toda a tela no celular */
     .video-container iframe {
-        height: 220px; /* Reduz a altura do vídeo para se ajustar melhor ao celular */
+        width: 100%; /* Vídeo ocupa toda a largura disponível */
+        height: 220px; /* Ajuste de altura para celular */
     }
 
-    /* Cards (Produtos) */
+    /* Ajustes para os cards */
     .card {
         min-height: 300px; /* Torna os cards um pouco menores em telas menores */
-        display: flex;
-        flex-direction: column; /* Garante que o conteúdo dentro do card seja empilhado */
-        height: 100%; /* Faz com que o card ocupe toda a altura disponível */
-        border-radius: 15px; /* Bordas mais arredondadas para um visual mais suave */
-        background-color: rgba(255, 255, 255, 0.85); /* Fundo branco suave com transparência */
-        color: #343a40; /* Cor do texto para melhor visibilidade */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave no hover */
     }
 
-    .card-body {
-        background-color: transparent; /* Fundo transparente para destacar o conteúdo */
-        color: #343a40; /* Cor do texto harmonizada com a marca */
-        padding: 10px; /* Menos espaçamento interno para telas menores */
-        text-align: center; /* Alinha o texto centralizado para dar um toque moderno */
-        flex-grow: 1; /* Faz com que o conteúdo do card se ajuste automaticamente */
+    /* Garantir que os cards fiquem lado a lado em telas pequenas */
+    .col-md-6 {
+        flex: 0 0 48%; /* Faz com que os cards ocupem 48% da largura disponível */
+        max-width: 48%; /* Limita a largura máxima dos cards */
+        margin-bottom: 1.5rem; /* Menos espaço entre os cards */
+    }
+
+    .product-card {
+        margin-bottom: 1.5rem; /* Menos espaço entre os cards em telas menores */
     }
 
     .card-title {
@@ -443,14 +439,15 @@ body {
         font-size: 1.1rem; /* Ajuste para o preço também */
     }
 
+    /* Responsividade no botão de "Adicionar ao Carrinho" */
+    .btn {
+        font-size: 1rem; /* Ajuste para que o botão não fique grande demais */
+        padding: 8px 15px; /* Tamanho mais adequado para telas pequenas */
+    }
+
     .card-img-top {
         height: 120px; /* Limita a altura das imagens */
         object-fit: contain; /* Garante que a imagem seja adaptada sem cortar */
-    }
-
-    /* Ajustes gerais no layout dos cards */
-    .product-card {
-        margin-bottom: 1.5rem; /* Menos espaço entre os cards em telas menores */
     }
 
     /* Ajustes na navbar */
@@ -459,15 +456,15 @@ body {
         max-height: 60px; /* Limita a altura da logo */
     }
 
-    /* Responsividade no botão de "Adicionar ao Carrinho" */
-    .btn {
-        font-size: 1rem; /* Ajuste para que o botão não fique grande demais */
-        padding: 8px 15px; /* Tamanho mais adequado para telas pequenas */
-    }
-
+    /* Botões de carrinho e "finalizar compra" em telas pequenas */
     .btn-success, .btn-danger {
         font-size: 0.9rem; /* Ajuste de tamanho de fonte para botões */
         padding: 8px 15px; /* Ajuste de padding nos botões */
+    }
+
+    .btn-success, .btn-danger {
+        width: 100%; /* Garante que ocupem toda a largura do container */
+        margin-bottom: 10px; /* Espaçamento entre os botões */
     }
 
     /* Ajustes no layout do footer */
@@ -479,22 +476,6 @@ body {
     /* Ajustes nos ícones sociais */
     .social-icons {
         gap: 10px; /* Menos espaçamento entre os ícones */
-    }
-
-    /* Cards lado a lado para tela pequena, ajustados em colunas */
-    .col-md-6 {
-        flex: 0 0 48%; /* Coloca os cards lado a lado em telas menores */
-        max-width: 48%;
-        margin-bottom: 1.5rem; /* Menos espaço entre os cards */
-    }
-
-    /* Ajustes na posição dos cards: Eles ficam abaixo do vídeo */
-    .product-card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 1rem;
-        margin-top: 30px; /* Espaço entre o vídeo e os cards */
     }
 
     /* Ajustes gerais para os produtos em telas pequenas */
@@ -513,7 +494,17 @@ body {
     #form-frete .col-md-4 {
         margin-bottom: 10px; /* Reduz o espaçamento entre os campos em telas menores */
     }
+
+    /* Cards lado a lado para tela pequena, ajustados em colunas */
+    .product-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 30px; /* Espaço entre o vídeo e os cards */
+    }
 }
+
 
 
 

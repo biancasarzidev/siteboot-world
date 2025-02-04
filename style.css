@@ -406,21 +406,27 @@ body {
 
 /*-----FIM DA ÁREA DO FOOTER E ÍCONES----*/
 
-/* Responsividade */
-/* Responsividade para a área dos produtos */
+/* ---- Responsividade -----*/
 @media (max-width: 768px) {
-    .product-card {
-        margin-bottom: 1rem; /* Menor espaçamento entre os cards */
-    }
 
     .card {
-        margin-bottom: 1.5rem; /* Ajusta o espaçamento entre os cards em dispositivos móveis */
+        min-height: 300px; /* Torna os cards um pouco menores em telas menores */
     }
 
-    /* Cards ocupando a largura total em telas pequenas */
     .card-body {
-        padding: 15px; /* Menos espaçamento no conteúdo do card */
+        padding: 10px; /* Menos espaçamento interno para telas menores */
     }
+
+    .col-md-6 {
+        flex: 0 0 48%; /* Faz com que dois cards ocupem 48% da largura disponível */
+        max-width: 48%; /* Limita a largura máxima dos cards */
+    }
+
+    .product-card {
+        margin-bottom: 1.5rem; /* Menos espaço entre os cards em telas menores */
+    }
+    
+    /* Cards ocupando a largura total em telas pequenas */
 
     .card-title {
         font-size: 1.1rem; /* Menor tamanho de fonte para o título */

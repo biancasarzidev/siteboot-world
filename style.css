@@ -65,6 +65,27 @@ body {
 
 /*-----FIM DA ÁREA DO MENU----*/
 
+/*-----ESTILIZAÇÃO DO VÍDEO----*/
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+}
+
+.embed-responsive {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 /*-----CARRINHO DE COMPRAS----*/
 
 /* Estilo do container do carrinho */
@@ -281,6 +302,9 @@ body {
     padding: 20px; /* Aumenta o espaço interno */
     text-align: center; /* Alinha o texto centralizado para dar um toque moderno */
     flex-grow: 1; /* Faz com que o conteúdo do card se ajuste automaticamente */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-title {
@@ -294,6 +318,7 @@ body {
     font-size: 1rem; /* Fonte mais limpa para a descrição */
     color: #6c757d; /* Cor cinza para o texto descritivo */
     margin-bottom: 10px; /* Espaço abaixo do texto */
+    flex-grow: 1;
 }
 
 .card-price {
@@ -322,6 +347,10 @@ body {
     margin: 0 auto; /* Centraliza a imagem dentro do card */
 }
 
+.card button {
+    align-self: center;
+    margin-top: auto;
+}
 /*-----FIM DA ÁREA DOS PRODUTOS----*/
 
 /* Estilo para Formulário de Pagamento */

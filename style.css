@@ -5,6 +5,10 @@
 body {
     background-color: black; /* Fundo preto */
     color: white; /* Cor do texto padrão */
+    margin: 0px;
+    width: 100%;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 /* Estilo da navbar */
@@ -354,229 +358,67 @@ body {
 
 /*-----ÁREA DO FOOTER E ÍCONES----*/
 
-/* Estilo geral do Footer */
+/* Estilos para o footer */
 .footer-custom {
-    background-color: #6f42c1; /* Fundo roxo */
-    color: white; /* Texto branco */
+    background-color: #6a0dad; /* Roxo */
+    color: white;
     padding: 20px 0;
+    width: 100%; /* Garante que o footer ocupe toda a largura da tela */
+    position: relative;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
 }
 
-/* Estilo das informações do Footer */
+/* Garante que o container ocupe toda a largura */
+.footer-custom .container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
+    padding: 0 5%; /* Adiciona um espaçamento interno */
+    box-sizing: border-box;
+}
+
+/* Ajusta os textos e ícones */
 .footer-info {
-    text-align: left; /* Alinha o texto à esquerda */
+    flex: 1;
+    min-width: 300px;
 }
 
-/* Estilo dos links no Footer */
-.footer-custom a {
-    color: white; /* Cor dos links brancos */
-    transition: color 0.3s ease-in-out;
+.footer-info h4, .footer-social h4 {
+    margin-bottom: 10px;
 }
 
-.footer-custom a:hover {
-    color: #e0e0e0; /* Cor dos links ao passar o mouse */
-}
-
-/* Estilo para os ícones sociais */
 .footer-social {
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: right;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 300px;
 }
 
-.footer-social h4 {
-    margin-bottom: 10px; /* Espaçamento entre o título e os ícones */
-}
-
-/* Estilo para os ícones sociais */
 .social-icons {
     display: flex;
-    gap: 20px; /* Espaçamento entre os ícones */
+    gap: 15px;
+    justify-content: flex-end;
 }
 
 .social-icon {
-    font-size: 24px; /* Tamanho dos ícones */
-    color: white; /* Cor dos ícones */
-    text-decoration: none; /* Remove o sublinhado */
-    transition: transform 0.3s ease, color 0.3s ease;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
 }
 
 .social-icon:hover {
-    color: #d1d1d1; /* Muda a cor ao passar o mouse */
-    transform: scale(1.2); /* Dá um pequeno zoom ao passar o mouse */
+    transform: scale(1.2);
 }
 
 /*-----FIM DA ÁREA DO FOOTER E ÍCONES----*/
-
-/* Responsividade para telas grandes (desktop) */
-@media (min-width: 769px) {
-    .footer-custom .container {
-        display: flex;
-        justify-content: space-between; /* Distribui as colunas igualmente */
-        align-items: center; /* Alinha os itens no centro */
-        gap: 20px; /* Espaçamento entre as colunas */
-    }
-
-    .footer-info {
-        flex: 1; /* Ocupa o espaço restante */
-        max-width: 45%; /* Define o tamanho da área de informações */
-        text-align: left; /* Alinha as informações à esquerda */
-    }
-
-    .footer-social {
-        flex: 1; /* Ocupa o espaço restante */
-        max-width: 45%; /* Define o tamanho da área social */
-        display: flex;
-        justify-content: flex-start; /* Alinha os ícones sociais à esquerda */
-        text-align: left; /* Alinha os ícones sociais à esquerda */
-    }
-
-    .social-icons {
-        display: flex;
-        gap: 20px; /* Espaçamento entre os ícones */
-        justify-content: flex-start; /* Alinha os ícones à esquerda */
-    }
-
-    .social-icon {
-        font-size: 24px; /* Tamanho dos ícones */
-        color: white; /* Cor dos ícones */
-        text-decoration: none; /* Remove o sublinhado */
-        transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .social-icon:hover {
-        color: #d1d1d1; /* Muda a cor ao passar o mouse */
-        transform: scale(1.2); /* Dá um pequeno zoom ao passar o mouse */
-    }
-}
-
-/* ---- Responsividade ----- */
-@media (max-width: 768px) {
-
-    /* Vídeo deve ocupar toda a tela no celular */
-    .video-container iframe {
-        width: 100%; /* Vídeo ocupa toda a largura disponível */
-        height: 220px; /* Ajuste de altura para celular */
-    }
-
-    /* Ajustes para os cards */
-    .card {
-        min-height: 300px; /* Torna os cards um pouco menores em telas menores */
-    }
-
-    /* Garantir que os cards fiquem lado a lado em telas pequenas */
-    .col-md-6 {
-        flex: 0 0 48%; /* Faz com que os cards ocupem 48% da largura disponível */
-        max-width: 48%; /* Limita a largura máxima dos cards */
-        margin-bottom: 1.5rem; /* Menos espaço entre os cards */
-    }
-
-    .product-card {
-        margin-bottom: 1.5rem; /* Menos espaço entre os cards em telas menores */
-    }
-
-    .card-title {
-        font-size: 1.1rem; /* Menor tamanho de fonte para o título */
-    }
-
-    .card-price {
-        font-size: 1.1rem; /* Ajuste para o preço também */
-    }
-
-    /* Responsividade no botão de "Adicionar ao Carrinho" */
-    .btn {
-        font-size: 1rem; /* Ajuste para que o botão não fique grande demais */
-        padding: 8px 15px; /* Tamanho mais adequado para telas pequenas */
-    }
-
-    .card-img-top {
-        height: 120px; /* Limita a altura das imagens */
-        object-fit: contain; /* Garante que a imagem seja adaptada sem cortar */
-    }
-
-    /* Ajustes na navbar */
-    .navbar-brand img {
-        width: 60px; /* Ajuste da logo para telas pequenas */
-        max-height: 60px; /* Limita a altura da logo */
-    }
-
-    /* Botões de carrinho e "finalizar compra" em telas pequenas */
-    .btn-success, .btn-danger {
-        font-size: 0.9rem; /* Ajuste de tamanho de fonte para botões */
-        padding: 8px 15px; /* Ajuste de padding nos botões */
-    }
-
-    .btn-success, .btn-danger {
-        width: 100%; /* Garante que ocupem toda a largura do container */
-        margin-bottom: 10px; /* Espaçamento entre os botões */
-    }
-
-    .footer-custom {
-        padding: 15px 0;
-    }
-
-    /* Flexbox para garantir que os elementos do footer fiquem empilhados em telas pequenas */
-    .footer-info, .footer-social {
-        flex-basis: 100%; /* Faz com que ocupe toda a largura disponível */
-        text-align: center; /* Centraliza o texto no celular */
-        margin-bottom: 15px; /* Espaçamento entre as seções do footer */
-    }
-
-     /* Ajuste de tamanhos dos ícones no celular */
-     .social-icons {
-        justify-content: center; /* Centraliza os ícones sociais */
-        gap: 10px; /* Menos espaçamento entre os ícones */
-    }
-
-    .social-icon {
-        font-size: 30px; /* Aumenta o tamanho dos ícones no celular */
-    }
-
-    /* Ajustes gerais para os produtos em telas pequenas */
-    .col-md-3 {
-        flex: 0 0 100%; /* Faz com que os produtos ocupem toda a largura da tela */
-        max-width: 100%; /* Impede que fiquem sobrepostos */
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    #form-frete .form-row {
-        flex-direction: column; /* Empilha os campos em telas menores */
-    }
-
-    #form-frete .col-md-8,
-    #form-frete .col-md-4 {
-        margin-bottom: 10px; /* Reduz o espaçamento entre os campos em telas menores */
-    }
-
-    /* Cards lado a lado para tela pequena, ajustados em colunas */
-    .product-card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 1rem;
-        margin-top: 30px; /* Espaço entre o vídeo e os cards */
-    }
-}
-
-/* Responsividade usando o sistema de grid do Bootstrap */
-@media (min-width: 768px) {
-    .footer-custom .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap; /* Garante que os itens do footer se ajustem em telas pequenas */
-    }
-
-    /* Estilo do footer no desktop */
-    .footer-info {
-        flex-basis: 45%;
-    }
-
-    .footer-social {
-        flex-basis: 45%;
-        display: flex;
-        justify-content: flex-start;
-    }
-}
-
-
-
-
